@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,10 +22,16 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(LoginActivity.this,"Button clicked from the code",Toast.LENGTH_LONG).show(); trae mensaje emergente
-                //Acceder al segundo activity y mandarle un string
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-                startActivity(intent);
+                String usuario = ((EditText) findViewById(R.id.editTextUser)).getText().toString();
+                String password = ((EditText) findViewById(R.id.editTextPassword)).getText().toString();
+                if (usuario.equals("user") && password.equals("user"))
+                {
+                    Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
