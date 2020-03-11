@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity"></activity>
+        <activity
+            android:name=".ConfiguracionActivity"
+            android:label="@string/title_activity_configuracion"></activity>
+        <activity android:name=".ReferenciasActivity" />
+        <activity android:name=".PostuladosActivity" />
+        <activity
+            android:name=".TrabajosActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PersonalActivity" />
+        <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
