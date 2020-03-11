@@ -6,73 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textViewFrase"
-        android:layout_width="280dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:text="Tu plataforma de trabajo ahora en tu celular"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFrase" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="ChangasUY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="105dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="36dp"
-        android:background="#448AFF"
-        android:text="Ingresa"
-        android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+            <TextView
+                android:id="@+id/textViewFrase"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Tu plataforma de trabajo ahora en tu celular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="98dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="28dp"
-        android:background="#448AFF"
-        android:text="Registrate"
-        android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+            <EditText
+                android:id="@+id/editTextUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFrase" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="ChangasUY"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="105dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:background="#448AFF"
+                android:text="Ingresa"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="98dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="16dp"
+                android:background="#448AFF"
+                android:text="Registrate"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
