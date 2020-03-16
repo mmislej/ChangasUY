@@ -1,5 +1,7 @@
 package com.test.changasuy.models;
 
+import com.test.changasuy.app.MyApplication;
+
 import org.jetbrains.annotations.NotNull;
 
 import io.realm.RealmList;
@@ -20,7 +22,7 @@ public class Postulado extends RealmObject {
     }
 
     public Postulado(Boolean postuladoSi){
-        this.id = 0;
+        this.id = MyApplication.PostuladoID.incrementAndGet();
         this.postuladoSi = false;
         this.trabajos = new RealmList<Trabajo>();
     }

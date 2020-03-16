@@ -1,5 +1,7 @@
 package com.test.changasuy.models;
 
+import com.test.changasuy.app.MyApplication;
+
 import java.util.Date;
 
 import io.realm.RealmObject;
@@ -26,7 +28,7 @@ public class Trabajo extends RealmObject {
 
     public Trabajo (String titulo, String descripcion,int limiteHorario1, int limiteHorario2,
                     int salario,Date fechaInicio, Date fechaFinal){
-        this.id = 0;
+        this.id = MyApplication.TrabajoID.incrementAndGet();
         this.descripcion = descripcion;
         this.limiteHorario1 = limiteHorario1;
         this.limiteHorario2 = limiteHorario2;
