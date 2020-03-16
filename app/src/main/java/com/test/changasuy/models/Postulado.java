@@ -1,5 +1,7 @@
 package com.test.changasuy.models;
 
+import org.jetbrains.annotations.NotNull;
+
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -9,7 +11,6 @@ public class Postulado extends RealmObject {
 
     @PrimaryKey
     private int id;
-    @Required
     private boolean postuladoSi;
 
     private RealmList<Trabajo> trabajos;

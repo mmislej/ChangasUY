@@ -14,15 +14,10 @@ public class Trabajo extends RealmObject {
     private String  titulo;
     @Required
     private String descripcion;
-    @Required
     private int limiteHorario1;
-    @Required
     private int limiteHorario2;
-    @Required
     private int salario;
-    @Required
     private Date fechaInicio;
-    @Required
     private Date fechaFinal;
 
     public Trabajo (){
