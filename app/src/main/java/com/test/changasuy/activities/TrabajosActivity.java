@@ -1,20 +1,37 @@
-package com.test.changasuy;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.test.changasuy.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.test.changasuy.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
-public class ReferenciasActivity extends AppCompatActivity {
+public class TrabajosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_referencias);
+        setContentView(R.layout.activity_trabajos);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,11 +47,11 @@ public class ReferenciasActivity extends AppCompatActivity {
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,ConfiguracionActivity.class));
+                startActivity(new Intent(this, ConfiguracionActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.menu:
                 Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,MenuActivity.class));
+                startActivity(new Intent(this, MenuActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.compartir:
                 Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();
@@ -50,4 +67,5 @@ public class ReferenciasActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

@@ -1,6 +1,5 @@
-package com.test.changasuy;
+package com.test.changasuy.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.test.changasuy.R;
 
 public class PostuladosActivity extends AppCompatActivity {
 
@@ -30,11 +31,11 @@ public class PostuladosActivity extends AppCompatActivity {
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,ConfiguracionActivity.class));
+                startActivity(new Intent(this, ConfiguracionActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.menu:
                 Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,MenuActivity.class));
+                startActivity(new Intent(this, MenuActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.compartir:
                 Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();

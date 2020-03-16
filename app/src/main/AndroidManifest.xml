@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ConfiguracionActivity"
+            android:name=".activities.ConfiguracionActivity"
             android:label="@string/title_activity_configuracion"></activity>
-        <activity android:name=".ReferenciasActivity" />
-        <activity android:name=".PostuladosActivity" />
+        <activity android:name=".activities.ReferenciasActivity" />
+        <activity android:name=".activities.PostuladosActivity" />
         <activity
-            android:name=".TrabajosActivity"
+            android:name=".activities.TrabajosActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PersonalActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.PersonalActivity" />
+        <activity android:name=".activities.MenuActivity" />
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

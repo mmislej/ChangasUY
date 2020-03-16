@@ -1,4 +1,6 @@
-package com.test.changasuy;
+package com.test.changasuy.activities;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,32 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceFragmentCompat;
+import com.test.changasuy.R;
 
-public class ConfiguracionActivity extends AppCompatActivity {
+public class PersonalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.settings, new SettingsFragment())
-                .commit();
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-    }
-
-    public static class SettingsFragment extends PreferenceFragmentCompat {
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
-        }
+        setContentView(R.layout.activity_personal);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,11 +31,11 @@ public class ConfiguracionActivity extends AppCompatActivity {
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,ConfiguracionActivity.class));
+                startActivity(new Intent(this, ConfiguracionActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.menu:
                 Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,MenuActivity.class));
+                startActivity(new Intent(this, MenuActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.compartir:
                 Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();
