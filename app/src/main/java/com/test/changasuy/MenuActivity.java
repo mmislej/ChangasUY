@@ -82,7 +82,7 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search:
-                Toast.makeText(getApplicationContext(),"Search",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Busar",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();

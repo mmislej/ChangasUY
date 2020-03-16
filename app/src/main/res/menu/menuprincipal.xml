@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_action_search"
+        android:title="Buscar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/configuracion"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Configuracion"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:title="Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/compartir"
+        android:icon="@drawable/ic_action_share"
+        android:title="Compartir"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/acerca_de"
+        android:icon="@drawable/ic_action_about"
+        android:title="Acerda de"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ayuda"
+        android:icon="@drawable/ic_action_help"
+        android:title="Ayuda"
+        app:showAsAction="never" />
+</menu>
