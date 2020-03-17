@@ -1,6 +1,5 @@
-package com.test.changasuy;
+package com.test.changasuy.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.test.changasuy.R;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -33,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,PersonalActivity.class);
+                Intent intent = new Intent(MenuActivity.this, PersonalActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,TrabajosActivity.class);
+                Intent intent = new Intent(MenuActivity.this, TrabajosActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +50,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,PostuladosActivity.class);
+                Intent intent = new Intent(MenuActivity.this, PostuladosActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +58,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,ReferenciasActivity.class);
+                Intent intent = new Intent(MenuActivity.this, ReferenciasActivity.class);
                 startActivity(intent);
             }
         });
@@ -65,7 +66,7 @@ public class MenuActivity extends AppCompatActivity {
         btn_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this,ConfiguracionActivity.class);
+                Intent intent = new Intent(MenuActivity.this, ConfiguracionActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +83,7 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search:
-                Toast.makeText(getApplicationContext(),"Busar",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Buscar",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
