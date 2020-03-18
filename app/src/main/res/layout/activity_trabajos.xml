@@ -23,14 +23,16 @@
     <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabAddBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:src="@mipmap/ic_add_fab_foreground"
+        app:backgroundTint="@color/colorPrimary" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -39,5 +41,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <ListView
+        android:id="@id/listViewBoard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#D51515"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="center" />
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
