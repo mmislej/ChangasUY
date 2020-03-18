@@ -93,6 +93,14 @@ public class MenuActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,MenuActivity.class));
                 return super.onOptionsItemSelected(item);
+            case R.id.personal:
+                Toast.makeText(getApplicationContext(),"Área Personal",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,PersonalActivity.class));
+                return super.onOptionsItemSelected(item);
+            case R.id.trabajos:
+                Toast.makeText(getApplicationContext(),"Mis Trabajos",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,TrabajosActivity.class));
+                return super.onOptionsItemSelected(item);
             case R.id.compartir:
                 Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();
                 return true;

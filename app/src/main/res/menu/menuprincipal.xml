@@ -18,6 +18,12 @@
         android:title="Menu"
         app:showAsAction="never" />
     <item
+        android:id="@+id/personal"
+        android:title="Personal" />
+    <item
+        android:id="@+id/trabajos"
+        android:title="Trabajos" />
+    <item
         android:id="@+id/compartir"
         android:icon="@drawable/ic_action_share"
         android:title="Compartir"

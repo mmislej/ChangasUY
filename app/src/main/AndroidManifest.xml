@@ -11,14 +11,20 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.ConfiguracionActivity"
-            android:label="@string/title_activity_configuracion"></activity>
-        <activity android:name=".activities.ReferenciasActivity" />
-        <activity android:name=".activities.PostuladosActivity" />
+            android:label="Configuración"></activity>
+        <activity
+            android:name=".activities.ReferenciasActivity"
+            android:label="Referencias"></activity>
+        <activity
+            android:name=".activities.PostuladosActivity"
+            android:label="Postulados"></activity>
         <activity
             android:name=".activities.TrabajosActivity"
-            android:label="@string/title_activity_main"
+            android:label="Mis Trabajos"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.PersonalActivity" />
+        <activity
+            android:name=".activities.PersonalActivity"
+            android:label="Área Personal"></activity>
         <activity android:name=".activities.MenuActivity" />
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
