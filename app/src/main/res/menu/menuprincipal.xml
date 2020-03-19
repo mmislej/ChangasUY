@@ -38,4 +38,7 @@
         android:icon="@drawable/ic_action_help"
         android:title="Ayuda"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/cerrar"
+        android:title="Cerrar" />
 </menu>

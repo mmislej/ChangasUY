@@ -5,16 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.test.changasuy.R;
 import com.test.changasuy.models.Trabajo;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -161,6 +158,10 @@ public class TrabajosActivity extends AppCompatActivity {
             case R.id.ayuda:
                 Toast.makeText(getApplicationContext(),"Ayuda",Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.cerrar:
+                startActivity(new Intent(this,LoginActivity.class));
+                finishAffinity();
+                return super.onOptionsItemSelected(item);
 
             default:
                 return super.onOptionsItemSelected(item);

@@ -54,6 +54,10 @@ public class PersonalActivity extends AppCompatActivity {
             case R.id.ayuda:
                 Toast.makeText(getApplicationContext(),"Ayuda",Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.cerrar:
+                startActivity(new Intent(this,LoginActivity.class));
+                finishAffinity();
+                return super.onOptionsItemSelected(item);
 
             default:
                 return super.onOptionsItemSelected(item);
