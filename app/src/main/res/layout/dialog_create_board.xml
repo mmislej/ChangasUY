@@ -7,14 +7,70 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextNewBoard"
+        android:id="@+id/editTextNewBoardTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_marginTop="15dp"
-        android:hint="Board title"
+        android:hint="Título"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="15dp"
-
         />
+
+    <EditText
+        android:id="@+id/editTextNewBoardDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Descripción"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardTitulo"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/editTextNewBoardlimiteHorario1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Horario 1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardDescripcion"
+        tools:layout_editor_absoluteX="28dp" />
+    <EditText
+        android:id="@+id/editTextNewBoardlimiteHorario2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Horario 2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardlimiteHorario1"
+        tools:layout_editor_absoluteX="28dp" />
+    <EditText
+        android:id="@+id/editTextNewBoardlimiteSalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Salario"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardlimiteHorario2"
+        tools:layout_editor_absoluteX="28dp" />
+    <EditText
+        android:id="@+id/editTextNewBoardlimiteFechainicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Fecha de inicio"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardlimiteSalario"
+        tools:layout_editor_absoluteX="28dp" />
+    <EditText
+        android:id="@+id/editTextNewBoardlimiteFechafinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="Fecha de finalización"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewBoardlimiteFechainicio"
+        tools:layout_editor_absoluteX="28dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

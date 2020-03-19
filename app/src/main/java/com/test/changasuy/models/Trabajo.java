@@ -1,5 +1,7 @@
 package com.test.changasuy.models;
 
+import android.text.Editable;
+
 import com.test.changasuy.app.MyApplication;
 
 import java.util.Date;
@@ -13,22 +15,26 @@ public class Trabajo extends RealmObject {
     @PrimaryKey
     private int id;
     @Required
-    private String  titulo;
+    private String  titulo = null;
     @Required
-    private String descripcion;
-    private int limiteHorario1;
-    private int limiteHorario2;
-    private int salario;
-    private Date fechaInicio;
-    private Date fechaFinal;
+    private String descripcion= null;
+    private String limiteHorario1= null;
+    private String limiteHorario2= null;
+    private String salario= null;
+    private Date fechaInicio= null;
+    private Date fechaFinal= null;
 
-    public Trabajo (){
+
+    public Trabajo(){
 
     }
 
-    public Trabajo (String titulo, String descripcion,int limiteHorario1, int limiteHorario2,
-                    int salario,Date fechaInicio, Date fechaFinal){
+
+
+    public Trabajo (String titulo, String descripcion, String limiteHorario1, String limiteHorario2,
+                    String salario,Date fechaInicio, Date fechaFinal){
         this.id = MyApplication.TrabajoID.incrementAndGet();
+        this.titulo = titulo;
         this.descripcion = descripcion;
         this.limiteHorario1 = limiteHorario1;
         this.limiteHorario2 = limiteHorario2;
@@ -36,6 +42,8 @@ public class Trabajo extends RealmObject {
         this.fechaInicio = fechaInicio;
         this.fechaFinal = fechaFinal;
     }
+
+
 
     public int getId() {
         return id;
@@ -57,27 +65,27 @@ public class Trabajo extends RealmObject {
         this.descripcion = descripcion;
     }
 
-    public int getLimiteHorario1() {
+    public String getLimiteHorario1() {
         return limiteHorario1;
     }
 
-    public void setLimiteHorario1(int limiteHorario1) {
+    public void setLimiteHorario1(String limiteHorario1) {
         this.limiteHorario1 = limiteHorario1;
     }
 
-    public int getLimiteHorario2() {
+    public String getLimiteHorario2() {
         return limiteHorario2;
     }
 
-    public void setLimiteHorario2(int limiteHorario2) {
+    public void setLimiteHorario2(String limiteHorario2) {
         this.limiteHorario2 = limiteHorario2;
     }
 
-    public int getSalario() {
+    public String getSalario() {
         return salario;
     }
 
-    public void setSalario(int salario) {
+    public void setSalario(String salario) {
         this.salario = salario;
     }
 
