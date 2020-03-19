@@ -134,15 +134,23 @@ public class TrabajosActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search:
-                Toast.makeText(getApplicationContext(),"Search",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Buscar",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.configuracion:
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, ConfiguracionActivity.class));
+                startActivity(new Intent(this,ConfiguracionActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.menu:
                 Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, MenuActivity.class));
+                startActivity(new Intent(this,MenuActivity.class));
+                return super.onOptionsItemSelected(item);
+            case R.id.personal:
+                Toast.makeText(getApplicationContext(),"Área Personal",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,PersonalActivity.class));
+                return super.onOptionsItemSelected(item);
+            case R.id.trabajos:
+                Toast.makeText(getApplicationContext(),"Mis Trabajos",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,TrabajosActivity.class));
                 return super.onOptionsItemSelected(item);
             case R.id.compartir:
                 Toast.makeText(getApplicationContext(),"Compartir",Toast.LENGTH_SHORT).show();
@@ -158,7 +166,4 @@ public class TrabajosActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-
 }
