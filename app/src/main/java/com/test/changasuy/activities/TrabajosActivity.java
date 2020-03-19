@@ -54,25 +54,13 @@ public class TrabajosActivity extends AppCompatActivity {
     }
 
     private void createNewBoardTrabajo(String setearTitulo, String setearDescripcion, String setearlimiteHorario1,  String setearlimiteHorario2, String setearsalario,
-                                Date setearfechaInicio, Date setearfechaFinal) {
+                                       String setearfechaInicio, String setearfechaFinal) {
 
         realm.beginTransaction();
         Trabajo trabajo = new Trabajo(setearTitulo, setearDescripcion, setearlimiteHorario1, setearlimiteHorario2, setearsalario,
                 setearfechaInicio, setearfechaFinal);
         realm.copyToRealm(trabajo);
         realm.commitTransaction();
-        /*
-        this.id = MyApplication.TrabajoID.incrementAndGet();
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.setearlimiteHorario1 = limiteHorario1;
-        this.setearlimiteHorario2 = limiteHorario2;
-        this.setearsalario = salario;
-        this.setearfechaInicio = fechaInicio;
-        this.setearfechaFinal = fechaFinal;
-           */
-
-
     }
     private void createNewBoardPostulado(){
 
@@ -103,8 +91,8 @@ public class TrabajosActivity extends AppCompatActivity {
                 String setearLimiteHorario1 = inputLimiteHorario1.getText().toString().trim();
                 String setearLimiteHorario2 = inputLimiteHorario2.getText().toString().trim();
                 String setearSalario = inputSalario.getText().toString().trim();
-                Date setearFechaInicio = (Date) inputFechaInicio.getText();
-                Date setearFechaFinal = (Date) inputFechaFinal.getText();
+                String setearFechaInicio = inputFechaInicio.getText().toString().trim();
+                String setearFechaFinal = inputFechaFinal.getText().toString().trim();
                 if(setearTitulo.length()> 0) {
                     createNewBoardTrabajo(setearTitulo, setearDescripcion, setearLimiteHorario1, setearLimiteHorario2, setearSalario,
                             setearFechaInicio, setearFechaFinal);

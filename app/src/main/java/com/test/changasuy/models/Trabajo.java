@@ -21,8 +21,8 @@ public class Trabajo extends RealmObject {
     private String limiteHorario1= null;
     private String limiteHorario2= null;
     private String salario= null;
-    private Date fechaInicio= null;
-    private Date fechaFinal= null;
+    private String fechaInicio= null;
+    private String fechaFinal= null;
 
 
     public Trabajo(){
@@ -32,7 +32,7 @@ public class Trabajo extends RealmObject {
 
 
     public Trabajo (String titulo, String descripcion, String limiteHorario1, String limiteHorario2,
-                    String salario,Date fechaInicio, Date fechaFinal){
+                    String salario,String fechaInicio, String fechaFinal){
         this.id = MyApplication.TrabajoID.incrementAndGet();
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -89,19 +89,19 @@ public class Trabajo extends RealmObject {
         this.salario = salario;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFinal() {
+    public String getFechaFinal() {
         return fechaFinal;
     }
 
-    public void setFechaFinal(Date fechaFinal) {
+    public void setFechaFinal(String fechaFinal) {
         this.fechaFinal = fechaFinal;
     }
 }
