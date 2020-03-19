@@ -115,7 +115,6 @@ public class MenuActivity extends AppCompatActivity {
                 finishAffinity();
                 return super.onOptionsItemSelected(item);
 
-
             default:
                 return super.onOptionsItemSelected(item);
         }
