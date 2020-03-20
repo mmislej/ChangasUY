@@ -34,22 +34,35 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="center">
     </ScrollView>
 
-    <ListView
-        android:id="@id/listViewBoard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#D51515"
-        app:layout_anchor="@+id/scrollView2"
-        app:layout_anchorGravity="center" />
 
 
+
+            <TextView
+                android:id="@id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wrap_content"
+                android:textAppearance="@style/AppTheme" />
+
+            <TextView
+                android:id="@id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:layout_marginTop="40dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <TextView
+                android:id="@id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:textAppearance="@style/AppTheme" />
+    />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

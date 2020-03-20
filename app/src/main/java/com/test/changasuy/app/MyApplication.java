@@ -31,19 +31,20 @@ public class MyApplication extends Application {
 
     }
 
-    private void setUpRealmConfig(){
+    private void setUpRealmConfig() {
         Realm.init(getApplicationContext());
         RealmConfiguration config = new RealmConfiguration.Builder()
                 .name(Realm.DEFAULT_REALM_NAME)                         // Tuve que modificar esto para que compile
                 .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(config);
-
-
     }
 
-    private <T extends RealmObject> AtomicInteger getIdByTable(Realm realm, Class<T> anyClass){
-        RealmResults<T> results = realm.where(anyClass).findAll();
-        return (results.size()> 0) ? new AtomicInteger(results.max("Id").intValue()): new AtomicInteger();
-    }
+
+
+         private <T extends RealmObject> AtomicInteger getIdByTable(Realm realm, Class<T> anyClass){
+         RealmResults<T> results = realm.where(anyClass).findAll();
+         return (results.size()> 0) ? new AtomicInteger(results.max("id").intValue()): new AtomicInteger();
+        }
+
 }
