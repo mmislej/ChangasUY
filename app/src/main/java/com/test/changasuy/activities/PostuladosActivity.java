@@ -33,10 +33,6 @@ public class PostuladosActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Configuracion",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,ConfiguracionActivity.class));
                 return super.onOptionsItemSelected(item);
-            case R.id.menu:
-                Toast.makeText(getApplicationContext(),"Menu",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,MenuActivity.class));
-                return super.onOptionsItemSelected(item);
             case R.id.personal:
                 Toast.makeText(getApplicationContext(),"Área Personal",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,PersonalActivity.class));

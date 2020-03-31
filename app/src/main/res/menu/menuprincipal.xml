@@ -13,11 +13,6 @@
         android:title="Configuracion"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu"
-        android:icon="@drawable/ic_action_view_as_list"
-        android:title="Menu"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/personal"
         android:title="Personal" />
     <item

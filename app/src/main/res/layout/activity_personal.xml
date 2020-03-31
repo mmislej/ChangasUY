@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,13 +12,105 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/setPicture"
+                android:layout_width="101dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:contentDescription="Foto de Perfil" />
+
+            <Button
+                android:id="@+id/buttonImage"
+                android:layout_width="76dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:onClick="onClick"
+                android:text="imagen" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="Apellidos"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="Teléfono"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="Fecha de Nacimiento"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:ems="10"
+                android:hint="Profesión"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="338dp"
+                android:layout_height="147dp"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Presentación personal"
+                android:inputType="textMultiLine" />
+
+
+        </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
