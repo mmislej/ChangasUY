@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 String password = ((EditText) findViewById(R.id.editTextPassword)).getText().toString();
                 if (usuario.equals("user") && password.equals("user"))
                 {
-                    Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, PersonalActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
